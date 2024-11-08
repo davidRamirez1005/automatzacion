@@ -41,12 +41,12 @@ create_new_item() {
   controllerFilePath="$controllerDir/$controllerName.js"
   controllerCode="angular.module(APPNAME).controller('${controllerName}Controller', function (\$scope, configuracionGlobal, \$rootScope, servicioGeneral, servicioConfiguracion, servicioAdministracion) {\n\
 });"
-  echo -e "$controllerCode" > "$controllerFilePath"
+  echo "$controllerCode" > "$controllerFilePath"
   # Crear archivo HTML en la carpeta especificada de form
   formDir="form/$formFolderName"
   mkdir -p "$formDir"
   formFilePath="$formDir/$routeName.html"
-  echo -e "<!-- HTML para $routeName -->" > "$formFilePath"
+  echo "<!-- HTML para $routeName -->" > "$formFilePath"
   echo "Elementos creados exitosamente"
 }
 # Llamar a la función para crear elementos
